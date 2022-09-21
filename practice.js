@@ -67,10 +67,19 @@ console.log(biggest([]))
 // {q: 'cats', type: 'images', format: 'gif'}
 
 function urlParams(query) {
-  return undefined;
+  let url = query.split('?');
+  if(url.length ===1){
+    return {}
+  }
+  let params = url[1].split('&')
+  let obj = {}
+  for(let i = 0; i<params.length; i++){
+    let keyVal = params[i].split('=')
+    obj[keyVal[0]]=keyVal[1]
+  }
+  return obj;
 }
 console.log(urlParams("http://google.com/"))
 console.log(urlParams("http://google.com/?q=cats"))
 console.log(urlParams("http://google.com/?q=cats&type=images"))
 console.log(urlParams("http://google.com/?q=cats&type=images&format=gif"))
-
