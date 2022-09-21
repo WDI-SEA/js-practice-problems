@@ -1,21 +1,43 @@
-console.log("practice");
-
 // Write a function called 'average' that accepts a list of
 // numbers and returns the average. The average
 // of an empty list should be considered zero.
-function average() {
-  return undefined;
+function average(arr) {
+
+  let sum = 0
+  if(arr.length === 0){
+    return 0
+  }
+  else{
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
+  }
+  let avg = sum / 2
+  return avg
+  }
 }
 console.log(average([1, 2, 3]))
 console.log(average([]))
 
+
+
 // Write a function called `biggest` that returns the
 // biggest number in an array. If there is no biggest
 // number the function should return undefined.
-function biggest() {
-  return undefined;
+function biggest(arr) {
+  let max = 0
+  if(arr.length === 0){
+    return undefined
+  }
+  else{
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]
+    } 
+  }
+  return max
+  }
 }
-console.log(biggest([12,3,4,567,8]))
+console.log(biggest([12, 3, 4, 567, 8]))
 console.log(biggest([]))
 
 // Write a function called `urlParams` that accepts a
