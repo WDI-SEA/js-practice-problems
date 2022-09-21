@@ -4,15 +4,15 @@
 function average(arr) {
 
   let sum = 0
-  if(arr.length === 0){
+  if (arr.length === 0) {
     return 0
   }
-  else{
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i]
-  }
-  let avg = sum / 2
-  return avg
+  else {
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i]
+    }
+    let avg = sum / arr.length
+    return avg
   }
 }
 console.log(average([1, 2, 3]))
