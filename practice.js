@@ -58,7 +58,6 @@ console.log(biggest([]))
 
 function urlParams(query) {
   let obj = {};
-  // let thereAreQueries = false;
   if (query.split('?')[1]) {
     let arr = query.split('?')[1].split('&');
     arr.forEach(item => {
