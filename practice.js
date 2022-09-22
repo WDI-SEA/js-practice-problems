@@ -74,10 +74,8 @@ function urlParams(query) {
   //return an object
   } else {
 
-  //split the string
+  //split the string and take only the the part after "?"
   let string = query.split("?")[1]
-
-  string = string.toString()
   
   let arrStr = string.split("&")
 
