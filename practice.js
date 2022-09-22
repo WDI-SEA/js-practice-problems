@@ -12,8 +12,18 @@ console.log(average([]))
 // Write a function called `biggest` that returns the
 // biggest number in an array. If there is no biggest
 // number the function should return undefined.
-function biggest() {
-  return undefined;
+function biggest(m) {
+  var n=0;
+  var l=0;
+  var b=m.length-1;
+  while(n<b){
+    
+    if(m[n]>m[n++]){
+    l=m[n];
+    }
+
+  }
+  return l;
 }
 console.log(biggest([12,3,4,567,8]))
 console.log(biggest([]))
